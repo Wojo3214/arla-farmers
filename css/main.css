@@ -59,8 +59,19 @@ button{
 
 .grid-container{
     display: grid;
-    grid-template-columns: 80px 1fr;
     grid-template-areas: "navigation main-content"
     "navigation main-content";
 }
+
+@media (min-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 960px) {
+    .grid-container {
+        grid-template-columns: 80px 1fr;
+    }
+  }
 
