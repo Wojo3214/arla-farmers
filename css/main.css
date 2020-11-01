@@ -44,12 +44,67 @@ button{
     text-transform: uppercase;
 }
 
+/***** NAVIGATION *****/
 .navigation{
-    background-color: rgb(161, 81, 81);
+    background-color: white;
     grid-area: nav;
     height: 100vh;
     grid-column: 1 / 2;
     grid-row-start: 1;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+.nav_list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav_item {
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    
+}
+
+.nav_link {
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'ArlaStrong';
+    color: var(--dark);
+
+}
+
+.nav_link:hover {
+    color: var(--grey);
+    transition: 0.2s;
+}
+
+.nav_logo {
+    width: 100%;
+    margin: auto;
+}
+
+.nav_icon {
+    width: 60%;
+    margin-bottom: 5px;
+}
+
+.nav_rights {
+    font-family: 'ArlaInterface-regular';
+    font-size: 12px;
 }
 
 .main-content{
@@ -59,19 +114,19 @@ button{
 
 .grid-container{
     display: grid;
+    grid-template-columns: 100px 1fr;
     grid-template-areas: "navigation main-content"
     "navigation main-content";
 }
 
-@media (min-width: 600px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (min-width: 960px) {
-    .grid-container {
-        grid-template-columns: 80px 1fr;
-    }
-  }
-
+@media (min-width: 600px) { 
+    .grid-container { 
+      grid-template-columns: 1fr; 
+    } 
+  } 
+   
+  @media (min-width: 960px) { 
+    .grid-container { 
+        grid-template-columns: 100px 1fr; 
+    } 
+}
