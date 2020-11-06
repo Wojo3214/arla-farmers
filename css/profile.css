@@ -1,0 +1,187 @@
+:root{
+    --main-green: #367964;
+    --btn-green: #B8D2BC;
+    --hover-green: #265F3D;
+    --dark: #323A38;
+    --grey: #93A5A1;
+    --yellow: #F3CB54;
+    --shadow: 0px 4px 8px 0px rgba(0,0,0,0.16);
+}
+
+/*===IMPORTING FONTS===*/
+@font-face {
+    font-family: 'ArlaInterface-regular';
+    src: url('/fonts/ArlaInterFace-Regular.woff');
+}
+
+@font-face {
+    font-family: 'ArlaInterface-bold';
+    src: url('/fonts/ArlaInterFace-Bold.woff');
+}
+
+@font-face {
+    font-family: 'ArlaStrong';
+    src: url('/fonts/ARLASTRONG-Regular.woff');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.profile_item {
+    color: var(--grey);
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 500px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "navigation profile badges";
+}
+
+.profile {
+    background-color: var(--main-green);
+    grid-area: profile;
+}
+
+
+.badges {
+    grid-area: badges;
+}
+
+.profile_img {
+    background-color: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 100px;
+    margin-bottom: 2vh;
+}
+
+#profile_name {
+    font-family: ArlaInterface-Bold;
+    font-size: 36px;
+    color: white;
+    margin-bottom: 1vh;
+}
+
+.farm_id {
+    font-family: ArlaInterface-Bold;
+    font-size: 24px;
+    color: white;
+}
+
+
+
+.theme_button button {
+    font-size: 15px;
+    border: none;
+    padding: 10px 0;
+    margin-right: -5px;
+    width: 110px;
+    
+}
+
+.theme_button button:hover {
+   cursor: pointer;
+}
+
+#not_active {
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+#on {
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+#off {
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+#dkk {
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+#eng {
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+#active {
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+.not_active {
+    background-color: #E9E9E8;
+    color: #C1BEB5;
+}
+
+.active {
+    background-color: white;
+    color: var(--dark);
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vh;
+}
+
+.button_label {
+    font-family: ArlaInterface-Bold;
+    font-size: 24px;
+    color: white;
+    margin-right: 3vh;
+}
+
+.password {
+    font-size: 22px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 32px;
+    color: var(--dark);
+    background-color: var(--btn-green);
+    margin: 5vh auto;
+}
+
+.password:hover {
+    opacity: 0.9;
+}
+
+.log_out {
+    font-size: 24px;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    text-transform: none;
+    font-family: ArlaInterface-Regular;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0;
+}
+
+.set_pas {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

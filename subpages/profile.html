@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Kristine Dzumakajeva, Magdalena Polakowska, Wojciech Dzwonczyk, Dan Berger">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hfm1aui.css">
+    <title>Arla farmers - dashboard</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <nav class="navigation">
+            <ul class="nav_list">
+                <li class="nav_item logo">
+                    <a href="../index.html" id="home" class="nav_link"><img src="../img/logo.svg" class="nav_logo"
+                            alt="Arla logo"></a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html" id="home" class="nav_link"><img src="../img/home_icon.svg" class="nav_icon"
+                            alt="Icon">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="subpages/news.html" id="news" class="nav_link"><img src="../img/news_icon.svg"
+                            class="nav_icon" alt="Icon">News</a>
+                </li>
+                <li class="nav_item">
+                    <a href="subpages/data.html" id="data" class="nav_link"><img src="../img/data_icon.svg"
+                            class="nav_icon" alt="Icon">Data</a>
+                </li>
+                <li class="nav_item">
+                    <a href="subpages/form.html" id="form" class="nav_link"><img src="../img/form_icon.svg"
+                            class="nav_icon" alt="Icon">Form</a>
+                </li>
+                <li class="nav_item">
+                    <a id="profile" class="nav_link profile_item"><img src="../img/profile_icon.svg" class="nav_icon"
+                            alt="Icon">Profile</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <div class="profile_info">
+                <img src="../img/profile_icon.svg" alt="Profile Image" class="profile_img">
+                <h3 id="profile_name">HENRY LAEGKE</h3>
+                <p class="farm_id">ID: MH0938462839</p>
+            </div>
+
+            <div>
+                <div class="button">
+                    <p class="button_label">Theme:</p>
+                    <div class="theme_button">
+                        <button class="active" id="not_active" onclick="themeOff()">NOT ACTIVE</button>
+                        <button class="not_active" id="active" onclick="themeOn()">ACTIVE</button>
+                    </div>
+                </div>
+                <div class="button">
+                    <p class="button_label">Notifications:</p>
+                    <div class="theme_button">
+                        <button class="active" id="off" onclick="off()">OFF</button>
+                        <button class="not_active" id="on" onclick="on()">on</button>
+                    </div>
+                </div>
+                <div class="button">
+                    <p class="button_label">Language:</p>
+                    <div class="theme_button">
+                        <button class="active" id="dkk" onclick="dkk()">English</button>
+                        <button class="not_active" id="eng" onclick="eng()">danish</button>
+                    </div>
+                </div>
+            </div>
+            <div class="set_pas">
+                <button class="password">change password</button>
+
+                <button type="button" name="button" class="log_out" onclick="logout()">Log out</button>
+            </div>
+        </div>
+        <div class="badges">
+
+
+        </div>
+
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/profile.js"></script>
+    <!----- firebase config js file ----->
+    <script src="../js/firebase_config.js"></script>
+    <!----- main js file ----->
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

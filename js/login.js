@@ -24,7 +24,7 @@ function userAuthenticated(user) {
     document.getElementById("hello").innerHTML = "Hi " + user.displayName;
     document.getElementById("name").innerHTML =
         `<h2>${user.displayName}</h2>`;
-     
+
 }
 
 
@@ -52,7 +52,7 @@ function logout() {
 
 // navigate to a new view/page by changing href
 function navigateToLogin(pageId) {
-    location.href = "subpages/login.html"
+    location.href = "../subpages/login.html"
 }
 
 //=== Init function for whole SPA ===//
