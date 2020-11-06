@@ -22,8 +22,6 @@ function userAuthenticated(user) {
 
     // Appending currentUser name ans surname to HTML
     document.getElementById("hello").innerHTML = "Hi " + user.displayName;
-    document.getElementById("name").innerHTML =
-        `<h2>${user.displayName}</h2>`;
 
 }
 
@@ -47,7 +45,8 @@ function userNotAuthenticated() {
 //=== sign out user ===//
 function logout() {
     firebase.auth().signOut();
-    navigateToLogin("login")
+    navigateToLogin("login");
+    
 }
 
 // navigate to a new view/page by changing href
