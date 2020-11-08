@@ -11,17 +11,17 @@
 /*===IMPORTING FONTS===*/
 @font-face {
     font-family: 'ArlaInterface-regular';
-    src: url('/fonts/ArlaInterFace-Regular.woff');
+    src: url('../fonts/ArlaInterFace-Regular.woff');
 }
 
 @font-face {
     font-family: 'ArlaInterface-bold';
-    src: url('/fonts/ArlaInterFace-Bold.woff');
+    src: url('../fonts/ArlaInterFace-Bold.woff');
 }
 
 @font-face {
     font-family: 'ArlaStrong';
-    src: url('/fonts/ARLASTRONG-Regular.woff');
+    src: url('../fonts/ARLASTRONG-Regular.woff');
 }
 
 *{
@@ -42,13 +42,20 @@ h1, h2{
 
 button{
     text-transform: uppercase;
+    outline: none;
+    border: none;
+    font-family: ArlaInterface-Bold;
 }
 
+button:hover{
+    cursor: pointer;
+}
 /***** NAVIGATION *****/
 .navigation{
     background-color: white;
     position: fixed;
     grid-area: nav;
+    position: fixed;
     height: 100vh;
     grid-column: 1 / 2;
     grid-row-start: 1;
@@ -119,7 +126,272 @@ button{
     "navigation main-content";
 }
 
-@media (max-width: 700px) { 
+/******** FORM SECTION *********/
+.form_content{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.form_title {
+    position: absolute;
+    width: 50vw;
+    padding: 20px 0;
+    background-color: white;
+    z-index: 2;
+    text-align: center;
+    font-family: 'ArlaStrong';
+    font-size: 32px;
+    left: 0;
+    right: 0;
+    top: 20px;
+    margin: auto
+}
+
+.form-main {
+    position: relative;
+}
+
+.form_section{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+.form_cows_background {
+    background-image: url(../img/cow_background.png);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    filter: grayscale(50%) brightness(50%);
+}
+
+.form_milk_background {
+    background-image: url(../img/milk_background.png);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    filter: grayscale(50%) brightness(50%);
+}
+
+.form_tractor_background {
+    background-image: url(../img/tractor_background.png);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    filter: grayscale(50%) brightness(50%);
+}
+
+.form_pollution_background {
+    background-image: url(../img/pollution_background.png);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    filter: grayscale(50%) brightness(50%);
+}
+
+.form_cows_background:hover {
+    filter: grayscale(0%) brightness(70%);
+}
+
+.form_milk_background:hover {
+    filter: grayscale(0%) brightness(70%);
+}
+
+.form_tractor_background:hover {
+    filter: grayscale(0%) brightness(70%);
+}
+
+.form_pollution_background:hover {
+    filter: grayscale(0%) brightness(70%);
+}
+
+.continue_button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px;
+    font-family: ArlaInterface-bold;
+    font-size: 18px;
+    position: absolute;
+    z-index: 2;
+    bottom: 20%;
+}
+
+.continue_link {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/******** FORM QUESTIONS *********/
+.form_questions_content{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--main-green);
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.form_questions_section {
+    background-color: var(--main-green);
+    grid-area: main-content;
+}
+
+.pro-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    align-items: center;
+}
+
+.field {
+    margin: 30px 0 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+  
+.actions {
+margin-top: 25px;
+
+}
+
+.form_questions {
+    width: 80%;
+    font-family: 'ArlaInterface-bold';
+    font-size: 20px;
+}
+
+.question_input {
+    border: #EBE9E9 2px solid;
+    padding: 8px;
+    border-radius: 12px;
+    margin-top: -10px;
+    outline: none;
+    width: 20%;
+    
+}
+
+.progress-wrap {
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress {
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+
+.icon_svg {
+    width: 30px;
+    margin-bottom: -5px;
+}
+
+progress#progress {
+    appearance: none;
+}
+
+progress#progress::-webkit-progress-value {
+    background-color: var(--yellow);
+    border-radius: 8px;
+
+}
+
+progress#progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 8px;
+    height: 10px;
+    width: 100px;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+}
+
+.progress-message {
+    font-size: 20px;
+    font-family: 'ArlaInterface-regular';
+    align-self: flex-end;
+    position: absolute;
+}
+
+.save_button {
+    background-color: var(--btn-green);
+    padding: 10px 20px;
+    border-radius: 40px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/**** DATA PAGE *****/
+.top_data_title{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--main-green);
+    color: white;
+    font-family: 'ArlaStrong';
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+
+.data_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.prices_top_section {
+    width: 85%;
+    height: 12vh;
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.price_element {
+    width: 20%;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+
+@media (min-width: 600px) { 
     .grid-container { 
       grid-template-columns: 1fr; 
     } 
@@ -171,122 +443,6 @@ button{
    
   @media (max-width: 900px) { 
     .grid-container { 
-        grid-template-columns: 1fr;
-        grid-template-areas: "main-content"
-    "navigation";
-    }
-
-    .navigation{
-        bottom: 0px;
-        left: 0px;
-    }
+        grid-template-columns: 100px 1fr; 
+    } 
 }
-
-/***NEWS***/
-.news{
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.categories{
-    width: 100%;
-    margin-top: 50px;
-    padding: 15px 0;
-    box-shadow: var(--shadow);
-    display: flex;
-    justify-content: space-around;
-    justify-items: center;
-}
-
-.category-btn{
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.category-btn img{
-    width: 30px;
-    margin-right: 10px;
-}
-
-.active{
-    width: 100%;
-    height: 5px;
-    background-color: var(--yellow);
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-}
-
-.news-big-pic{
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-}
-
-.news-container{
-    margin-top: 40px;
-}
-
-.news-main-top{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    z-index: 997;
-}
-
-.news-article{
-    display: flex;
-    width: 40%;
-}
-
-.news-title{
-    font-size: 18px;
-}
-
-.desc-short{
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.author-and-date{
-    font-size: 14px;
-    color: var(--grey);
-}
-
-/*SPECIFIC ARTICLE*/
-.specific-big-pic{
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
-    position: relative;
-}
-
-.specific-title{
-    margin-top: 15px;
-    font-size: 42px;
-    text-align: left;
-    color: var(--dark);
-}
-
-.specific-text{
-    font-size: 18px;
-}
-
-.current-category{
-    display: none;
-}
-
-.go-back{
-    color: var(--dark);
-}
-
-
-.link-to-article{
-    color: var(--dark);
-    text-decoration: none;
-}
-

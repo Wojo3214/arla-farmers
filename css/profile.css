@@ -1,0 +1,329 @@
+:root{
+    --main-green: #367964;
+    --btn-green: #B8D2BC;
+    --hover-green: #265F3D;
+    --dark: #323A38;
+    --grey: #93A5A1;
+    --yellow: #F3CB54;
+    --shadow: 0px 4px 8px 0px rgba(0,0,0,0.16);
+}
+
+/*===IMPORTING FONTS===*/
+@font-face {
+    font-family: 'ArlaInterface-regular';
+    src: url('/fonts/ArlaInterFace-Regular.woff');
+}
+
+@font-face {
+    font-family: 'ArlaInterface-bold';
+    src: url('/fonts/ArlaInterFace-Bold.woff');
+}
+
+@font-face {
+    font-family: 'ArlaStrong';
+    src: url('/fonts/ARLASTRONG-Regular.woff');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.profile_item {
+    color: var(--grey);
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 500px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "navigation profile badges";
+}
+
+.profile {
+    background-color: var(--main-green);
+    grid-area: profile;
+}
+
+
+.badges {
+    grid-area: badges;
+}
+
+.profile_img {
+    background-color: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 100px;
+    margin-bottom: 2vh;
+}
+
+#profile_name {
+    font-family: ArlaInterface-Bold;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 1vh;
+}
+
+.farm_id {
+    font-family: ArlaInterface-Bold;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+.theme_button button {
+    font-size: 12px;
+    border: none;
+    padding: 10px 0;
+    margin-right: -5px;
+    width: 93px;
+    
+}
+
+.theme_button button:hover {
+   cursor: pointer;
+}
+
+#not_active {
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+#on {
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+#off {
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+#dkk {
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+#eng {
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+#active {
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+.not_active {
+    background-color: #E9E9E8;
+    color: #C1BEB5;
+}
+
+.active {
+    background-color: white;
+    color: var(--dark);
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.button_label {
+    font-family: ArlaInterface-Bold;
+    font-size: 20px;
+    color: white;
+    margin-right: 3vh;
+}
+
+.password {
+    font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 32px;
+    color: var(--dark);
+    background-color: var(--btn-green);
+    margin: 5vh auto;
+}
+
+.password:hover {
+    opacity: 0.9;
+}
+
+.log_out {
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    text-transform: none;
+    font-family: ArlaInterface-Regular;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5vh 0;
+}
+
+.set_pas {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.mark {
+    display: flex;
+}
+
+.mark_button {
+    padding: 0 8.5px;
+    border-radius: 32px;
+    font-size: 14px;
+    color: var(--dark);
+    background-color: #E9E9E8;
+    margin-left: -15px;
+}
+
+.mark_box {
+    position: absolute;
+    top: 36vh;
+}
+
+.mark_text {
+    width: 233px;
+    color: var(--dark);
+    font-family: ArlaInterface-Regular;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px 47px;
+    margin-bottom: 2.5vh;
+}
+
+.triangle {
+    margin-left: 70px;
+    width: 0; 
+  height: 0; 
+  border-left: 2vh solid transparent;
+  border-right: 2vh solid transparent;
+  border-top: 3vh solid white;
+}
+
+.open_text {
+    display: none;
+}
+
+
+/* carbon footprint section */
+
+.badges {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.carbon_header {
+    font-size: 32px;
+    margin-bottom: 2vh;
+}
+
+.carbon_text {
+    font-size: 20px;
+    padding-top: 1vh;
+}
+
+.big_badge {
+    margin-bottom: 2vh;
+    width: 25vh;
+}
+
+.all_badges{
+   margin: 0 auto;
+}
+
+.badge {
+    width: 6vw;
+    padding: 0 0.6vw;
+    margin-left: 1vw;
+}
+
+.two {
+    margin-left: 1.8vw;
+}
+
+.three {
+    margin-left: 1.5vw;
+}
+
+.four {
+    margin-left: 1.7vw;
+}
+
+.progress_line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+.line1 {
+    background-color: var(--main-green);
+    border: 2px solid var(--main-green);
+    padding: 0.2vw 4vw;
+    border-radius: 32px;
+    z-index: 1;
+}
+
+.circle1 {
+    background-color: var(--main-green);
+    border: 2px solid var(--main-green);
+    padding: 0.8vw 0.8vw;
+    border-radius: 32px;
+    margin-left: -3px;
+    z-index: 1;
+}
+
+.line {
+    background-color: #93A5A1;
+    border: 2px solid #93A5A1;
+    padding: 0.07vw 4vw;
+    border-radius: 32px;
+    margin-left: -3px;
+}
+
+.circle {
+    background-color: #93A5A1;
+    border: 2px solid #93A5A1;
+    padding: 0.4vw 0.4vw;
+    border-radius: 32px;
+    margin-left: -3px;
+}
+
+
+.description {
+    font-size: 20px;
+    padding: 0 10vw;
+}
+
+.all_badges {
+    margin-top: -10vh;
+}
