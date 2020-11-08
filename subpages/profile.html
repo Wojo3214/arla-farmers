@@ -25,15 +25,15 @@
                             alt="Icon">Home</a>
                 </li>
                 <li class="nav_item">
-                    <a href="news.html" id="news" class="nav_link"><img src="../img/news_icon.svg"
+                    <a href="subpages/news.html" id="news" class="nav_link"><img src="../img/news_icon.svg"
                             class="nav_icon" alt="Icon">News</a>
                 </li>
                 <li class="nav_item">
-                    <a href="data.html" id="data" class="nav_link"><img src="../img/data_icon.svg"
+                    <a href="subpages/data.html" id="data" class="nav_link"><img src="../img/data_icon.svg"
                             class="nav_icon" alt="Icon">Data</a>
                 </li>
                 <li class="nav_item">
-                    <a href="form.html" id="form" class="nav_link"><img src="../img/form_icon.svg"
+                    <a href="subpages/form.html" id="form" class="nav_link"><img src="../img/form_icon.svg"
                             class="nav_icon" alt="Icon">Form</a>
                 </li>
                 <li class="nav_item">
@@ -50,8 +50,19 @@
             </div>
 
             <div>
+                <div onclick="closeText()" id="mark" class="mark_box">
+                    <p class="mark_text">
+                        To personalize your dashboard based on seasons, activate 'Theme" option. Colors
+                        will be based on
+                        the time of the year.</p>
+                    <span class="triangle"></span>
+                </div>
                 <div class="button">
-                    <p class="button_label">Theme:</p>
+
+                    <div class="mark">
+                        <p class="button_label">Theme:</p>
+                        <button onclick="openText()" class="mark_button">?</button>
+                    </div>
                     <div class="theme_button">
                         <button class="active" id="not_active" onclick="themeOff()">NOT ACTIVE</button>
                         <button class="not_active" id="active" onclick="themeOn()">ACTIVE</button>
@@ -79,16 +90,47 @@
             </div>
         </div>
         <div class="badges">
+            <div>
+                <h1 class="carbon_header">Your carbon badge</h1>
+                <img src="../img/smallbadge1.svg" alt="BadgePhoto" class="big_badge">
+
+                <h2>congratulations!</h2>
+                <p class="carbon_text">You have reduced your carbon footprint to 75%!</p>
+            </div>
+            <div>
+                <div class="all_badges">
+                    <img src="../img/bigbadge1.svg" alt="BadgePhoto" class="badge one">
+                    <img src="../img/smallbadge2.svg" alt="BadgePhoto" class="badge two ">
+                    <img src="../img/smallbadge3.svg" alt="BadgePhoto" class="badge three">
+                    <img src="../img/smallbadge4.svg" alt="BadgePhoto" class="badge four">
+                </div>
+                <div class="progress_line">
+                    <span class="line1"></span>
+                    <span class="circle1"></span>
+                    <span class="line"></span>
+                    <span class="circle"></span>
+                    <span class="line"></span>
+                    <span class="circle"></span>
+                    <span class="line"></span>
+                    <span class="circle"></span>
+                    <span class="line"></span>
+
+                </div>
+                <p class="description">Your carbon footprint will be calculated from the data page. In this progress bar
+                    you can see your
+                    current achievement in reducing CO2. By achieving every new stage, we will reward you with
+                    increasing the milk price for 0.25 cent</p>
 
 
+            </div>
         </div>
 
 
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
     <script src="../js/main.js"></script>

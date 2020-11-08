@@ -67,3 +67,17 @@ function dkk() {
 dkk();
 
 
+function openText() {
+    let openText = document.getElementById("mark");
+    openText.classList.toggle("open_text");
+
+
+}
+openText();
+
+function closeText() {
+    let openText = document.getElementById("mark");
+    openText.classList.add("open_text");
+
+}
+closeText();
