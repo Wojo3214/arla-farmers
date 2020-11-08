@@ -15,3 +15,19 @@ const _firebaseConfig = {
 
 firebase.initializeApp(_firebaseConfig);
 const _db = firebase.firestore();
+
+const _dataRef = _db.collection("carbonFootprint");
+let _carbonFootprint;
+
+// 1: data from firebase
+// listen for changes on _dataRef
+_dataRef.orderBy("year").onSnapshot(snapshotData => {
+    _carbonFootprint = []; // reset _sustainabilityData
+    snapshotData.forEach(doc => { // loop through snapshotData - like for of loop
+        let data = doc.data(); // save the data in a variable
+        data.id = doc.id; // add the id to the data variable
+        _carbonFootprint.push(data); // push the data object to the global array _sustainabilityData
+    });
+    console.log(_carbonFootprint);
+    appendDividedCarbon(_carbonFootprint); // call appendCows with _sustainabilityData as function argument
+});

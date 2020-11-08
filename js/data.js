@@ -1,1 +1,4 @@
 "use strict";
+
+// ========== GLOBAL VARIABLES ========== //
+
