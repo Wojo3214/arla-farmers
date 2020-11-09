@@ -22,5 +22,104 @@
 @font-face {
     font-family: 'ArlaStrong';
     src: url('../fonts/ARLASTRONG-Regular.woff');
+}/* divided carbon section */
+
+
+
+.divided_carbon {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.diesel_circle {
+    background-color: #F3CB54;
+    padding: 0 11px;
+    border-radius: 32px;
+    margin-right: 10px;
+}
+
+.electricity_circle {
+    background-color: #8AB26E;
+    padding: 0 11px;
+    border-radius: 32px;
+    margin-right: 10px;
+}
+
+.digestion_circle {
+    background-color: #C6E1EC;
+    padding: 0 11px;
+    border-radius: 32px;
+    margin-right: 10px;
+}
+
+.feed_circle {
+    background-color: #2F6F84;
+    padding: 0 11px;
+    border-radius: 32px;
+    margin-right: 10px;
+}
+
+.legend_header {
+    font-family: ArlaInterface-bold;
+    font-size: 20px;
+}
+
+.legend_number {
+    font-family: ArlaInterface-regular;
+    font-size: 20px;
+    padding-bottom: 2vh;
+    padding-top: 5px;
+    margin-left: 32px;
+
+}
+
+.pie_chart {
+    position: relative;
+    width: 35vw;
+}
+
+.pie_section {
+    width: 25vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+#pie_legend {
+    width: 18vw;
+    padding-top: 3vh;
+}
+
+.chart_header {
+    font-family: ArlaInterface-bold;
+    font-size: 20px;
+    padding: 3vh 1vw;
+}
+
+/* bar chart */
+
+.bar_chart {
+    position: relative;
+    width: 50vw;
+}
+
+.bar_section {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 

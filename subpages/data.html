@@ -75,16 +75,22 @@
                     <canvas id="carbonFootprint"></canvas>
                 </div>
             </div>
-            
-
             <section class="divided_carbon">
                 <div class="pie_section">
-
+                    <h3 class="chart_header">Your carbon footprint 2019</h3>
+                    <div class="pie_chart">
+                        <canvas id="carbon_divided"></canvas>
+                    </div>
+                    <div id="pie_legend"></div>
                 </div>
                 <div class="bar_section">
-
+                    <h3 class="chart_header">Your carbon footprint: All</h3>
+                    <div class="bar_chart">
+                        <canvas id="carbon_bar"></canvas>
+                    </div>
                 </div>
             </section>
+            
 
 
         </div>
@@ -94,10 +100,12 @@
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
-        <script src="../js/main.js"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
         <!----- firebase config js file ----->
         <script src="../js/firebase_config.js"></script>
+        <script src="../js/main.js"></script>
         <!----- main js file ----->
         <script src="../js/login.js"></script>
         <script src="../js/data.js"></script>
