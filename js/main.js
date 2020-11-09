@@ -138,8 +138,8 @@ function openTechnology(value){
             article.id = doc.id;
             articles.push(article);
         });
-        value = "technology";
-        let filteredNews = articles.filter(article => article.category.includes("technology"));
+        value = "Technology";
+        let filteredNews = articles.filter(article => article.category.includes("Technology"));
         console.log(filteredNews);
         appendFilteredNews(filteredNews);
         
@@ -161,8 +161,8 @@ function openEvents(value){
             article.id = doc.id;
             articles.push(article);
         });
-        value = "events";
-        let filteredNews = articles.filter(article => article.category.includes("events"));
+        value = "Events";
+        let filteredNews = articles.filter(article => article.category.includes("Events"));
         console.log(filteredNews);
         appendFilteredNews(filteredNews);
         
