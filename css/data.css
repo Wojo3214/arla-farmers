@@ -27,51 +27,53 @@
 
 
 .divided_carbon {
-    height: 100vh;
+    margin: 40px 0;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+  justify-content: space-between;
 
 }
 
+.legend_article {
+    display: flex;
+    justify-content: space-around;
+}
 .diesel_circle {
     background-color: #F3CB54;
-    padding: 0 11px;
+    padding: 0 9px;
     border-radius: 32px;
     margin-right: 10px;
 }
 
 .electricity_circle {
     background-color: #8AB26E;
-    padding: 0 11px;
+    padding: 0 9px;
     border-radius: 32px;
     margin-right: 10px;
 }
 
 .digestion_circle {
     background-color: #C6E1EC;
-    padding: 0 11px;
+    padding: 0 9px;
     border-radius: 32px;
     margin-right: 10px;
 }
 
 .feed_circle {
     background-color: #2F6F84;
-    padding: 0 11px;
+    padding: 0 9px;
     border-radius: 32px;
     margin-right: 10px;
 }
 
 .legend_header {
     font-family: ArlaInterface-bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .legend_number {
     font-family: ArlaInterface-regular;
-    font-size: 20px;
+    font-size: 16px;
     padding-bottom: 2vh;
     padding-top: 5px;
     margin-left: 32px;
@@ -84,6 +86,7 @@
 }
 
 .pie_section {
+    
     width: 25vw;
     height: 80vh;
     display: flex;
@@ -100,26 +103,299 @@
 }
 
 .chart_header {
+    margin: auto;
     font-family: ArlaInterface-bold;
-    font-size: 20px;
-    padding: 3vh 1vw;
+    font-size: 18px;
+   
 }
 
 /* bar chart */
 
 .bar_chart {
-    position: relative;
-    width: 50vw;
+   margin: auto;
+    width: 90%;
+    height: 100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
 }
 
 .bar_section {
-    width: 50vw;
+  
+    width: 55vw;
     height: 80vh;
+   
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+    
+}
+
+.top_data_title{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--main-green);
+    color: white;
+    font-family: 'ArlaStrong';
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    padding: 20px 0;
+}
+
+
+.data-container{
+    width: 90%;
+    margin: 0 auto 40px auto;
+}
+
+.data_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.prices_top_section {
+    width: 100%;
+    height: 20vh;
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.price_element {
+    width: 20%;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    
+    font-family: 'ArlaInterface-bold';
+    justify-content: space-around;
+}
+
+.price_number {
+    display: flex;
+    flex-direction: row;
+    font-family: 'ArlaStrong';
+    align-items: center;
+    font-size: 2vw;
+    margin-top: 10px;
+}
+.box-wrappy {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.carbon_box {
+    width: 55vw;
+   
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    padding: 20px 0;
+}
+
+.overview {
+    width: 25vw;
+      -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.overview img {
+    align-self: center;
+    width: 70%;
+     margin-top: 20px;
+}
+.overviewinside {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 90%;
+}
+.nudgetext {
+    margin: 20px 0;
+        font-family: 'ArlaStrong';
+        font-size: 24px;
+        color: var(--main-green);
+}
+.nudgetext1 {
+    margin: 20px 0;
+        font-family: 'ArlaStrong';
+        font-size: 24px;
+        color: #00AC00;
+}
+.insidecarbonbox {
+    margin: auto;
+    width: 95%;
+}
+.data_icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.carbon_box_title {
+   font-size: 18px;
+     font-family: 'ArlaInterface-bold';
+}
+.arrowup {
+    font-family: 'ArlaInterface-regular';
+    margin: 5px 0 0 5px;
+    
+    
+}
+.arrowup img {
+    width: 15px;
+   
+}
+.arrowup span {
+  
+     color: var(--main-green);
+}
+
+@media (max-width: 700px) {
+    .prices_top_section {
+    width: 100%;
+   height: 400px;
+  
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.price_element {
+   height: 40%;
+    width: 40%;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    
+    font-family: 'ArlaInterface-bold';
+    justify-content: space-around;
+}
+.overview {
+    display: none;
+}
+
+.carbon_box {
+    width: 90vw;
+  height: 500px;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    padding: 20px 0;
+}
+.insidecarbonbox {
+    margin: auto;
+    position: relative;
+    height: 90%;
+   
+   
+}
+.divided_carbon {
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
+
+}
+.pie_chart {
+    position: relative;
+    width: 140%;
+}
+
+.pie_section {
+     width: 90vw;
+  height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     -webkit-box-shadow: var(--shadow);
     -moz-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
+    margin-bottom: 40px;
 }
 
+#pie_legend {
+    width: 18vw;
+    padding-top: 20px;
+}
+
+
+
+/* bar chart */
+
+.bar_chart {
+   
+    margin: auto;
+    position: relative;
+    height: 90%;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.bar_section {
+  width: 90vw;
+  height: 500px;
+   
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+    
+}
+
+.legend_article div {
+   margin: 0 10px;
+}
+.data-container{
+    width: 90%;
+    margin: 0 auto 120px auto;
+}
+
+.price_number {
+    display: flex;
+    flex-direction: row;
+    font-family: 'ArlaStrong';
+    align-items: center;
+    font-size: 24px;
+    margin-top: 10px;
+}
+.top_data_title{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--main-green);
+    color: white;
+    font-family: 'ArlaStrong';
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    padding: 20px 0;
+}
+}

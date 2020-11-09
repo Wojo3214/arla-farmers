@@ -20,6 +20,7 @@ function userAuthenticated(user) {
     _currentUser = user;
     console.log(user);
 
+
     // Appending currentUser name ans surname to HTML
     document.getElementById("hello").innerHTML += user.displayName;
 

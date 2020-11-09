@@ -53,59 +53,102 @@
                             class="nav_icon" alt="Icon">Form</a>
                 </li>
                 <li class="nav_item">
-                    <a href="../subpages/profile.html" id="profile" class="nav_link profile_item"><img src="../img/profile_icon.svg" class="nav_icon"
-                            alt="Icon">Profile</a>
+                    <a href="../subpages/profile.html" id="profile" class="nav_link profile_item"><img
+                            src="../img/profile_icon.svg" class="nav_icon" alt="Icon">Profile</a>
                 </li>
             </ul>
         </nav>
         <div class="main-content data_content">
-            <header class="top_data_title"><h3>YOUR DATA OVERVIEW</h3></header>
+            <header class="top_data_title">
+                <h3>YOUR DATA OVERVIEW</h3>
+            </header>
             <div class="data-container">
                 <section class="prices_top_section">
                     <div class="price_element box1">
                         <h3>Number of cows</h3>
                         <div class="price_number">
-                        <img src="../img/cow_data.png" class="data_icon"
-                        alt="Icon">50</div>
+                            <img src="../img/cow_data.png" class="data_icon" alt="Icon">50</div>
+                        <div class="arrowup"> <img src="/img/arrow-up.png" alt=""> <span>2</span> Since March</div>
                     </div>
                     <div class="price_element">
                         <h3>Liters of milk per cow</h3>
                         <div class="price_number">
-                        <img src="../img/milk_data.png" class="data_icon"
-                        alt="Icon">199,715</div>
+                            <img src="../img/milk_data.png" class="data_icon" alt="Icon">199,715</div>
+                        <div class="arrowup"> <img src="/img/arrow-up.png" alt=""> <span>8,163</span> Since March</div>
                     </div>
                     <div class="price_element">
                         <h3>Milk price per liter</h3>
                         <div class="price_number">
-                        $ 1,59</div>
+                            $ 1,59</div>
+                        <div class="arrowup"> <img src="/img/arrow-up.png" alt=""> <span>0,13</span> Since March</div>
                     </div>
                     <div class="price_element">
                         <h3>Revenue per cow</h3>
                         <div class="price_number">
-                        $ 317,547</div>
+                            $ 317,547</div>
+                        <div class="arrowup"> <img src="/img/arrow-up.png" alt=""> <span>2,945</span> Since March</div>
                     </div>
                 </section>
-                <div class="carbon_box">
-                    <h2 class="carbon_box_title">Your Carbon Footprint</h2>
-                    <canvas id="carbonFootprint"></canvas>
+                <div class="box-wrappy">
+                    <div class="carbon_box">
+                        <div class="insidecarbonbox">
+                            <h2 class="carbon_box_title">Your Carbon Footprint: Overview</h2>
+                            <canvas id="myCarbonFootprint"></canvas>
+                        </div>
+                    </div>
+                    <div class="overview">
+                        <div class="overviewinside">
+                            <h2 class="carbon_box_title">Your Carbon Footprint: Summary</h2>
+
+
+                            <img src="/img/summary.png" alt="" srcset="">
+                            <h3 class="nudgetext">KEEP UP THE
+                                <br> GREAT WORK!</h3>
+                            <p>Henry have improved by 34% over the last 3 years, keep it up!</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="divided_carbon">
+                    <div class="pie_section">
+                        <h3 class="chart_header">Your Carbon Footprint Sections
+                            <br> 2019</h3>
+                        <div class="pie_chart">
+                            <canvas id="carbon_divided"></canvas>
+                        </div>
+                        <div id="pie_legend"></div>
+                    </div>
+                    <div class="bar_section">
+
+                        <div class="bar_chart">
+                            <h3 class="carbon_box_title">Your Carbon Footprint Sections : Divided</h3>
+                            <div class="barr"> <canvas id="carbon_bar"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="box-wrappy">
+                    <div class="carbon_box">
+                        <div class="insidecarbonbox">
+                            <h2 class="carbon_box_title">Carbon Footprint: All Arla Farmers</h2>
+                            <canvas id="carbonFootprint"></canvas>
+                        </div>
+                    </div>
+                    <div class="overview">
+                        <div class="overviewinside">
+                            <h2 class="carbon_box_title">Arla's Carbon Footprint: Summary</h2>
+
+
+                            <img src="/img/Arladata.png" alt="" srcset="">
+                            <h3 class="nudgetext1">57%</h3>
+                            <p>Thanks to you all, Arla carbon footprint is now at an all time high of 57%
+                                <br>
+                                <br>
+                                Keep up the great work!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <section class="divided_carbon">
-                <div class="pie_section">
-                    <h3 class="chart_header">Your carbon footprint 2019</h3>
-                    <div class="pie_chart">
-                        <canvas id="carbon_divided"></canvas>
-                    </div>
-                    <div id="pie_legend"></div>
-                </div>
-                <div class="bar_section">
-                    <h3 class="chart_header">Your carbon footprint: All</h3>
-                    <div class="bar_chart">
-                        <canvas id="carbon_bar"></canvas>
-                    </div>
-                </div>
-            </section>
-            
+
 
 
         </div>
@@ -115,7 +158,7 @@
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
         <!----- firebase config js file ----->

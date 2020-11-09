@@ -35,6 +35,9 @@ html{
     font-family: ArlaInterface-regular;
     color: var(--dark);
 }
+body {
+    overflow: hidden;
+}
 h1, h2{
     font-family: ArlaStrong;
     font-size: 24px;
@@ -60,11 +63,33 @@ button:hover{
 }
 
 .logwrapper {
-
+    
+    
+width: 500px;
     background-color: var(--main-green);
 grid-area: login;
+
 }
 
+.wrappy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 40px;
+    height: 80%;
+}
+.logoo {
+    align-self: center;
+    width: 100px;
+    height: 100px;
+   
+    
+}
+
+.logoo img {
+    width: 100%;
+    height: auto;
+}
 .loginput {
     
 margin: auto;
@@ -74,6 +99,7 @@ margin: auto;
 .imgwrap {
     grid-area: logimg;
      height: 100vh;
+     
      overflow: hidden;
      
      
@@ -82,7 +108,7 @@ margin: auto;
 img {
    
 object-fit: cover;
-height: 140%;
+height: 100%;
 }
 
 #firebaseui-auth-container {
@@ -107,7 +133,8 @@ input {
 
 
 .mdl-textfield__label.firebaseui-label {
-    display: none;
+    color: white;
+    margin-top: 20px;
 }
 
 
@@ -151,4 +178,37 @@ a {
     font-size: 18px;
 }
 
+@media (max-width: 700px) {
+    .grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: "login";
 
+}
+
+.logwrapper {
+    height: 100vh;
+    
+width: 100vw;
+    background-color: var(--main-green);
+    opacity: 0.9;
+grid-area: login;
+
+
+}
+#firebaseui-auth-container {
+    width: 200px;
+}
+.imgwrap {
+    grid-area: login;
+     height: 100vh;
+     
+     overflow: hidden;
+     
+     
+}
+.imgwrap img {
+    margin-left: -500px;
+}
+}
