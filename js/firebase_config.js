@@ -15,3 +15,4 @@ const _firebaseConfig = {
 
 firebase.initializeApp(_firebaseConfig);
 const _db = firebase.firestore();
+

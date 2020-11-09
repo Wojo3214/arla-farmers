@@ -37,6 +37,7 @@
 
 .grid-container{
     display: grid;
+    height: 100vh;
     grid-template-columns: 100px 500px 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "navigation profile badges";
