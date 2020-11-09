@@ -11,17 +11,17 @@
 /*===IMPORTING FONTS===*/
 @font-face {
     font-family: 'ArlaInterface-regular';
-    src: url('/fonts/ArlaInterFace-Regular.woff');
+    src: url('../fonts/ArlaInterFace-Regular.woff');
 }
 
 @font-face {
     font-family: 'ArlaInterface-bold';
-    src: url('/fonts/ArlaInterFace-Bold.woff');
+    src: url('../fonts/ArlaInterFace-Bold.woff');
 }
 
 @font-face {
     font-family: 'ArlaStrong';
-    src: url('/fonts/ARLASTRONG-Regular.woff');
+    src: url('../fonts/ARLASTRONG-Regular.woff');
 }
 
 *{
@@ -62,14 +62,14 @@
 }
 
 #profile_name {
-    font-family: ArlaInterface-Bold;
+    font-family: ArlaInterface-bold;
     font-size: 32px;
     color: white;
     margin-bottom: 1vh;
 }
 
 .farm_id {
-    font-family: ArlaInterface-Bold;
+    font-family: ArlaInterface-bold;
     font-size: 20px;
     color: white;
 }
@@ -138,8 +138,8 @@
 }
 
 .button_label {
-    font-family: ArlaInterface-Bold;
-    font-size: 20px;
+    font-family: ArlaInterface-bold;
+    font-size: 24px;
     color: white;
     margin-right: 3vh;
 }
@@ -164,7 +164,7 @@
     color: white;
     text-decoration: underline;
     text-transform: none;
-    font-family: ArlaInterface-Regular;
+    font-family: ArlaInterface-regular;
 }
 
 .profile {
