@@ -445,7 +445,7 @@ canvas {
 
     .form_content{
         flex-direction: column;
-        height: 90vh;
+        height: calc(100vh - 155px);
     }
 
     .continue_button {
@@ -455,17 +455,38 @@ canvas {
 
     .form_title {
         position: relative;
-        width: 100%;
-        background-color: transparent;
-        padding:0;
-        font-size: 20px;
-        height: 10vh;
-        left: 0;
-        right: 0;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100%; 
+        top: 0; 
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .cow_question_icon {
+        fill: white;
+        z-index: 2;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    .milk_question_icon {
+        fill: white;
+        z-index: 2;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    .tractor_question_icon {
+        fill: white;
+        z-index: 2;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    .pollution_question_icon {
+        fill: white;
+        z-index: 2;
+        align-self: flex-start;
+        margin-top: 10px;
     }
 
 }

@@ -5,6 +5,7 @@
     height: 100vh;
 }
 
+
 .form_title {
     position: absolute;
     width: 50vw;
@@ -30,6 +31,7 @@
     justify-content: center;
     display: flex;
     align-items: flex-end;
+    position: relative;
 }
 
 .form_cows_background {
