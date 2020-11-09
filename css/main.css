@@ -112,6 +112,12 @@ button:hover{
     margin-bottom: 5px;
 }
 
+.active-nav-link{
+    fill: var(--grey);
+    color: var(--grey);
+}
+
+
 .nav_rights {
     font-family: 'ArlaInterface-regular';
     font-size: 12px;
