@@ -54,6 +54,7 @@ button:hover{
 /***** NAVIGATION *****/
 .navigation{
     background-color: white;
+    z-index: 10;
     position: fixed;
     grid-area: nav;
     width: 100px;
@@ -136,82 +137,7 @@ button:hover{
 
 
 
-/**** DATA PAGE *****/
-.top_data_title{
-    width: 100%;
-    height: 10vh;
-    background-color: var(--main-green);
-    color: white;
-    font-family: 'ArlaStrong';
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
-    padding: 20px 0;
-}
 
-
-.data-container{
-    width: 85%;
-    margin: 0 auto;
-}
-
-.data_content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-}
-
-.prices_top_section {
-    width: 100%;
-    height: 15vh;
-    margin: 5vh auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.price_element {
-    width: 20%;
-    -webkit-box-shadow: var(--shadow);
-    -moz-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    font-family: 'ArlaInterface-bold';
-    justify-content: center;
-}
-
-.price_number {
-    display: flex;
-    flex-direction: row;
-    font-family: 'ArlaStrong';
-    align-items: center;
-    font-size: 2vw;
-    margin-top: 10px;
-}
-
-.carbon_box {
-    width: 100%;
-    -webkit-box-shadow: var(--shadow);
-    -moz-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
-    padding: 30px 0;
-}
-
-.data_icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 5px;
-}
-
-.carbon_box_title {
-    margin-left: 30px
-}
 
 /***NEWS PAGE***/
 .news{

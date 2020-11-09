@@ -338,14 +338,16 @@ span {
     .bottom-index {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+   
     height: 100%;
     align-items: center;
     grid-area: bottom-content;
+    margin: 20px 0;
 }
 
     .deadline {
+        margin: 20px 0 80px 0;
     text-align: center;
     position: relative;
      padding: 10px 20px;
@@ -359,18 +361,21 @@ height: 40vh;
 
 
 .carbon {
+    margin: 20px 0;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   width: 80vw;
 height: 40vh;
+
 -webkit-box-shadow: var(--shadow);
     -moz-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
 }
 
 .weather {
+    margin: 20px 0;
      padding: 10px 20px;
     -webkit-box-shadow: var(--shadow);
     -moz-box-shadow: var(--shadow);
@@ -385,6 +390,33 @@ height: 40vh;
         grid-template-areas: "main-content" "bottom-content" 
         "nav";
     }
+.hello p {
+    display: none;
+}
+.carbonmain {
+    height: 80%;
+    padding-bottom: 50px;
+}
+.backtoform {
+display: flex;
+flex-direction: column;
+
+}
+progress {
+    align-self: center;
+}
+.button1 { 
+    align-self: center;
+    width: 50%;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 18px;
+    background-color: var(--grey) ;
+    border: none;
+    outline: none;
+    font-family: ArlaInterface-Bold;
+}
 
 }
 

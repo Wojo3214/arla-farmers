@@ -72,6 +72,7 @@ function appendCarbonFootprint(sustainabilityData) {
 
         },
         options: {
+            maintainAspectRatio: false,
             legend: {
                 align: 'center',
                 display: true,

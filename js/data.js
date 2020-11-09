@@ -24,7 +24,141 @@ _dataRef.orderBy("year").onSnapshot(snapshotData => {
     appendPieLabels(_carbonFootprint);
     appendBarCarbon(_carbonFootprint);
     appendDividedCarbon(_carbonFootprint);
+    appendMyCarbonFootprint(_carbonFootprint);
 });
+
+
+
+
+function prepareMyCarbonFootprint(carbonFootprint) {
+    // prepare data
+    let carbonAll = [];
+    let carbonSpring = [];
+    let carbonSummer = [];
+    let carbonAutumn = [];
+    let carbonWinter = [];
+    let years = [];
+    carbonFootprint.forEach(data => {
+        carbonAll.push(data.carbonAll);
+        carbonSpring.push(data.carbonSpring);
+        carbonSummer.push(data.carbonSummer);
+        carbonAutumn.push(data.carbonAutumn);
+        carbonWinter.push(data.carbonWinter);
+
+        years.push(data.year);
+    });
+
+    return {
+        carbonAll,
+        carbonSpring,
+        carbonSummer,
+        carbonAutumn,
+        carbonWinter,
+        years
+
+    }
+}
+
+//3: appending the chart
+function appendMyCarbonFootprint(carbonFootprint) {
+    let data = prepareMyCarbonFootprint(carbonFootprint);
+    console.log(data);
+
+    // generate chart
+    Chart.defaults.global.legend.labels.usePointStyle = true;
+    let chartContainer = document.querySelector('#myCarbonFootprint');
+    let chart = new Chart(chartContainer, {
+        type: 'line',
+        data: {
+            datasets: [{
+                data: data.carbonAll,
+                label: 'Carbon Footprint: Total',
+                fill: false,
+                borderColor: "#2A8556",
+                backgroundColor: "#2A8556",
+                pointBackgroundColor: "#2A8556",
+                pointBorderColor: "#2A8556",
+                pointHoverBackgroundColor: "#2A8556",
+                pointHoverBorderColor: "#2A8556",
+            },
+            {
+                data: data.carbonSpring,
+                label: 'Carbon Footprint: Spring',
+                fill: false,
+                borderColor: "#8AB26E",
+                backgroundColor: "#8AB26E",
+                pointBackgroundColor: "#8AB26E",
+                pointBorderColor: "#8AB26E",
+                pointHoverBackgroundColor: "#8AB26E",
+                pointHoverBorderColor: "#8AB26E",
+                hidden: true,
+            },
+            {
+                data: data.carbonSummer,
+                label: 'Carbon Footprint: Summer',
+                fill: false,
+                borderColor: "#F3CB54",
+                backgroundColor: "#F3CB54",
+                pointBackgroundColor: "#F3CB54",
+                pointBorderColor: "#F3CB54",
+                pointHoverBackgroundColor: "#F3CB54",
+                pointHoverBorderColor: "#F3CB54",
+                hidden: true,
+            },
+            {
+                data: data.carbonAutumn,
+                label: 'Carbon Footprint: Autumn',
+                fill: false,
+                borderColor: "#905345",
+                backgroundColor: "#905345",
+                pointBackgroundColor: "#905345",
+                pointBorderColor: "#905345",
+                pointHoverBackgroundColor: "#905345",
+                pointHoverBorderColor: "#905345",
+                hidden: true,
+            },
+            {
+                data: data.carbonWinter,
+                label: 'Carbon Footprint: Winter',
+                fill: false,
+                borderColor: "#CBE0EB",
+                backgroundColor: "#CBE0EB",
+                pointBackgroundColor: "#CBE0EB",
+                pointBorderColor: "#CBE0EB",
+                pointHoverBackgroundColor: "#CBE0EB",
+                pointHoverBorderColor: "#CBE0EB",
+                hidden: true,
+            }
+
+            ],
+            labels: data.years
+
+        },
+        options: {
+
+            maintainAspectRatio: false,
+
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: true
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: true
+                    }
+                }]
+            }
+        }
+
+    });
+}
+
+
+
+
+
 
 // 2: preparing the data
 function prepareCarbonFootprintData(carbonFootprint) {
@@ -74,7 +208,7 @@ function appendCarbonFootprint(carbonFootprint) {
                 data: data.FarmersMin,
                 label: '',
                 fill: true,
-                borderColor: "transparent",
+                borderColor: "#F3CB54",
                 backgroundColor: "white",
                 pointBackgroundColor: "#F3CB54",
                 pointBorderColor: "#F3CB54",
@@ -85,7 +219,7 @@ function appendCarbonFootprint(carbonFootprint) {
                 data: data.FarmersMax,
                 label: 'Arla Farmers Carbon Footprint',
                 fill: true,
-                borderColor: "#F9E6AE",
+                borderColor: "#F3CB54",
                 backgroundColor: "#F9E6AE",
                 pointBackgroundColor: "#F3CB54",
                 pointBorderColor: "#F3CB54",
@@ -98,7 +232,7 @@ function appendCarbonFootprint(carbonFootprint) {
 
         },
         options: {
-
+            maintainAspectRatio: false,
             legend: {
                 onClick: (e) => e.stopPropagation()
             },
@@ -182,6 +316,7 @@ function appendDividedCarbon(carbonFootprint) {
             ],
         },
         options: {
+            maintainAspectRatio: false,
             responsive: true,
             maintainAspectRatio: true,
             plugins: {
@@ -204,15 +339,15 @@ function appendPieLabels(carbonFootprint) {
     let data = prepareDividedCarbon(carbonFootprint);
     let htmlTemplate = "";
     htmlTemplate += `
-      <article>
-              <h3 class="legend_header"><span class="diesel_circle"></span>Diesel</h3>
+      <article class="legend_article">
+             <div> <h3 class="legend_header"><span class="diesel_circle"></span>Diesel</h3>
               <p class="legend_number">${data.diesel} kg</p>
               <h3 class="legend_header"><span class="electricity_circle"></span>Electricity</h2>
-              <p class="legend_number">${data.electricity} kg</p>
-              <h3 class="legend_header"><span class="digestion_circle"></span>Digestion</h3>
+              <p class="legend_number">${data.electricity} kg</p></div>
+             <div> <h3 class="legend_header"><span class="digestion_circle"></span>Digestion</h3>
               <p class="legend_number">${data.digestion} kg</p>
               <h3 class="legend_header"><span class="feed_circle"></span>Feed</h3>
-              <p class="legend_number">${data.feed} kg</p>
+              <p class="legend_number">${data.feed} kg</p></div>
       </article>
       `;
 
@@ -308,8 +443,9 @@ function appendBarCarbon(carbonFootprint) {
 
         },
         options: {
+            maintainAspectRatio: false,
             responsive: true,
-            maintainAspectRatio: true,
+
             plugins: {
                 labels: {
                     fontSize: 0
