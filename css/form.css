@@ -236,8 +236,14 @@ progress#progress::-webkit-progress-bar {
     font-size: 18px;
 }
 
+
+
 .save_button:hover {
     opacity: 0.9;
+}
+
+.create_button {
+    margin-left: 9.4vw;
 }
 
 .milk_section_questions {

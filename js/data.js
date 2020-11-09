@@ -3,6 +3,7 @@
 // ========== GLOBAL VARIABLES ========== //
 
 
+
 const _dataRef = _db.collection("carbonFootprint");
 let _carbonFootprint;
 let _carbonFootprintProgress;
@@ -369,5 +370,5 @@ function pushNewData() {
     };
 
     _dataRef.add(newData);
-
-}
+    document.getElementById("pro-form").reset();
+};
