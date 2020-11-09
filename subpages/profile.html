@@ -42,51 +42,52 @@
                 </li>
             </ul>
         </nav>
-        <div class="profile">
+        <div id="profile_section" class="profile">
             <div class="profile_info">
                 <img src="../img/profile_icon.svg" alt="Profile Image" class="profile_img">
-                <h3 id="profile_name">HENRY LAEGKE</h3>
+                <div class="profile_name" id="hello"></div>
                 <p class="farm_id">ID: MH0938462839</p>
             </div>
+            <div id="settings">
+                <div>
+                    <div onclick="closeText()" id="mark" class="mark_box">
+                        <p class="mark_text">
+                            To personalize your dashboard based on seasons, activate 'Theme" option. Colors
+                            will be based on
+                            the time of the year.</p>
+                        <span class="triangle"></span>
+                    </div>
+                    <div class="button">
 
-            <div>
-                <div onclick="closeText()" id="mark" class="mark_box">
-                    <p class="mark_text">
-                        To personalize your dashboard based on seasons, activate 'Theme" option. Colors
-                        will be based on
-                        the time of the year.</p>
-                    <span class="triangle"></span>
+                        <div class="mark">
+                            <p class="button_label">Theme:</p>
+                            <button onclick="openText()" class="mark_button">?</button>
+                        </div>
+                        <div class="theme_button">
+                            <button class="active" id="not_active" onclick="themeOff()">NOT ACTIVE</button>
+                            <button class="not_active" id="active" onclick="themeOn()">ACTIVE</button>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <p class="button_label">Notifications:</p>
+                        <div class="theme_button">
+                            <button class="active" id="off" onclick="off()">OFF</button>
+                            <button class="not_active" id="on" onclick="on()">on</button>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <p class="button_label">Language:</p>
+                        <div class="theme_button">
+                            <button class="active" id="dkk" onclick="dkk()">English</button>
+                            <button class="not_active" id="eng" onclick="eng()">danish</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="button">
+                <div class="set_pas">
+                    <button id="pas_button" class="password">change password</button>
 
-                    <div class="mark">
-                        <p class="button_label">Theme:</p>
-                        <button onclick="openText()" class="mark_button">?</button>
-                    </div>
-                    <div class="theme_button">
-                        <button class="active" id="not_active" onclick="themeOff()">NOT ACTIVE</button>
-                        <button class="not_active" id="active" onclick="themeOn()">ACTIVE</button>
-                    </div>
+                    <button type="button" name="button" class="log_out" onclick="logout()">Log out</button>
                 </div>
-                <div class="button">
-                    <p class="button_label">Notifications:</p>
-                    <div class="theme_button">
-                        <button class="active" id="off" onclick="off()">OFF</button>
-                        <button class="not_active" id="on" onclick="on()">on</button>
-                    </div>
-                </div>
-                <div class="button">
-                    <p class="button_label">Language:</p>
-                    <div class="theme_button">
-                        <button class="active" id="dkk" onclick="dkk()">English</button>
-                        <button class="not_active" id="eng" onclick="eng()">danish</button>
-                    </div>
-                </div>
-            </div>
-            <div class="set_pas">
-                <button class="password">change password</button>
-
-                <button type="button" name="button" class="log_out" onclick="logout()">Log out</button>
             </div>
         </div>
         <div class="badges">
@@ -105,8 +106,8 @@
                     <img src="../img/smallbadge4.svg" alt="BadgePhoto" class="badge four">
                 </div>
                 <div class="progress_line">
-                    <span class="line1"></span>
-                    <span class="circle1"></span>
+                    <span id="profile_progress" class="line1"></span>
+                    <span id="profile_progress1" class="circle1"></span>
                     <span class="line"></span>
                     <span class="circle"></span>
                     <span class="line"></span>
@@ -116,10 +117,15 @@
                     <span class="line"></span>
 
                 </div>
-                <p class="description">Your carbon footprint will be calculated from the data page. In this progress bar
+                <p class="description web">Your carbon footprint will be calculated from the data page. In this progress
+                    bar
                     you can see your
                     current achievement in reducing CO2. By achieving every new stage, we will reward you with
                     increasing the milk price for 0.25 cent</p>
+
+                <p class="description mobile">By achieving every new stage, we will reward
+                    you with increasing the milk price for 0.25<br>
+                    Keep filling out your form!</p>
 
 
             </div>
@@ -133,12 +139,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/profile.js"></script>
+
     <!----- firebase config js file ----->
     <script src="../js/firebase_config.js"></script>
     <!----- main js file ----->
     <script src="../js/login.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/profile.js"></script>
 </body>
 
 </html>
