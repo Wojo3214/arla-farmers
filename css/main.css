@@ -50,6 +50,7 @@ button{
 button:hover{
     cursor: pointer;
 }
+
 /***** NAVIGATION *****/
 .navigation{
     background-color: white;
@@ -57,6 +58,7 @@ button:hover{
     grid-area: nav;
     position: fixed;
     height: 100vh;
+    width: 100px;
     grid-column: 1 / 2;
     grid-row-start: 1;
     -webkit-box-shadow: var(--shadow);
@@ -122,234 +124,11 @@ button:hover{
 .grid-container{
     display: grid;
     grid-template-columns: 100px 1fr;
-    grid-template-areas: "navigation main-content"
-    "navigation main-content";
-}
-
-/******** FORM SECTION *********/
-.form_content{
-    display: flex;
-    width: 100%;
-    height: 100vh;
-}
-
-.form_title {
-    position: absolute;
-    width: 50vw;
-    padding: 20px 0;
-    background-color: white;
-    z-index: 2;
-    text-align: center;
-    font-family: 'ArlaStrong';
-    font-size: 32px;
-    left: 0;
-    right: 0;
-    top: 20px;
-    margin: auto
-}
-
-.form-main {
-    position: relative;
-}
-
-.form_section{
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    display: flex;
-    align-items: flex-end;
-}
-
-.form_cows_background {
-    background-image: url(../img/cow_background.png);
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.5s;
-    filter: grayscale(50%) brightness(50%);
-}
-
-.form_milk_background {
-    background-image: url(../img/milk_background.png);
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.5s;
-    filter: grayscale(50%) brightness(50%);
-}
-
-.form_tractor_background {
-    background-image: url(../img/tractor_background.png);
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.5s;
-    filter: grayscale(50%) brightness(50%);
-}
-
-.form_pollution_background {
-    background-image: url(../img/pollution_background.png);
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.5s;
-    filter: grayscale(50%) brightness(50%);
-}
-
-.form_cows_background:hover {
-    filter: grayscale(0%) brightness(70%);
-}
-
-.form_milk_background:hover {
-    filter: grayscale(0%) brightness(70%);
-}
-
-.form_tractor_background:hover {
-    filter: grayscale(0%) brightness(70%);
-}
-
-.form_pollution_background:hover {
-    filter: grayscale(0%) brightness(70%);
-}
-
-.continue_button {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 8px;
-    font-family: ArlaInterface-bold;
-    font-size: 18px;
-    position: absolute;
-    z-index: 2;
-    bottom: 20%;
-}
-
-.continue_link {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    justify-content: center;
-    display: flex;
-    align-items: flex-end;
+    grid-template-areas: "nav main-content"
+    "nav main-content";
 }
 
 
-/******** FORM QUESTIONS *********/
-.form_questions_content{
-    display: flex;
-    width: 100%;
-    height: 10vh;
-    background-color: var(--main-green);
-    justify-content: space-evenly;
-    align-items: flex-end;
-}
-
-.form_questions_section {
-    background-color: var(--main-green);
-    grid-area: main-content;
-}
-
-.pro-form {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;    
-    flex-direction: column;
-    align-items: center;
-}
-
-.field {
-    margin: 30px 0 10px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-}
-  
-.actions {
-margin-top: 25px;
-
-}
-
-.form_questions {
-    width: 80%;
-    font-family: 'ArlaInterface-bold';
-    font-size: 20px;
-}
-
-.question_input {
-    border: #EBE9E9 2px solid;
-    padding: 8px;
-    border-radius: 12px;
-    margin-top: -10px;
-    outline: none;
-    width: 20%;
-    
-}
-
-.progress-wrap {
-    text-align: center;
-    font-size: 10px;
-    color: white;
-    margin: 0 0 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.progress {
-    width: 100%;
-    margin: 0 0 5px 0;
-}
-
-.icon_svg {
-    width: 30px;
-    margin-bottom: -5px;
-}
-
-progress#progress {
-    appearance: none;
-}
-
-progress#progress::-webkit-progress-value {
-    background-color: var(--yellow);
-    border-radius: 8px;
-
-}
-
-progress#progress::-webkit-progress-bar {
-    background-color: white;
-    border-radius: 8px;
-    height: 10px;
-    width: 100px;
-    -webkit-box-shadow: var(--shadow);
-    -moz-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
-
-}
-
-.progress-message {
-    font-size: 20px;
-    font-family: 'ArlaInterface-regular';
-    align-self: flex-end;
-    position: absolute;
-}
-
-.save_button {
-    background-color: var(--btn-green);
-    padding: 10px 20px;
-    border-radius: 40px;
-    margin-top: 30px;
-    font-size: 18px;
-}
 
 /**** DATA PAGE *****/
 .top_data_title{
@@ -382,7 +161,7 @@ progress#progress::-webkit-progress-bar {
 
 .prices_top_section {
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     margin: 5vh auto;
     display: flex;
     justify-content: space-between;
@@ -396,8 +175,9 @@ progress#progress::-webkit-progress-bar {
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 15px;
     font-family: 'ArlaInterface-bold';
+    justify-content: center;
 }
 
 .price_number {
@@ -405,7 +185,8 @@ progress#progress::-webkit-progress-bar {
     flex-direction: row;
     font-family: 'ArlaStrong';
     align-items: center;
-    font-size: 32px;
+    font-size: 2vw;
+    margin-top: 10px;
 }
 
 .carbon_box {
@@ -413,6 +194,7 @@ progress#progress::-webkit-progress-bar {
     -webkit-box-shadow: var(--shadow);
     -moz-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
+    padding: 30px 0;
 }
 
 .data_icon {
@@ -460,14 +242,6 @@ canvas {
     margin-right: 10px;
 }
 
-.active{
-    width: 100%;
-    height: 5px;
-    background-color: var(--yellow);
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-}
 
 .news-big-pic{
     width: 100px;
@@ -540,7 +314,7 @@ canvas {
    
 @media (max-width: 700px){
     .grid-container { 
-        grid-template-columns: 1fr; 
+        grid-template-columns:100px 1fr; 
       } 
   
       .current-category{
@@ -572,22 +346,44 @@ canvas {
           margin: 10px 20px;
       }
   
-      .news-main-top{
-          flex-direction: column;
-          align-items: center;
-      }
+    .news-main-top{
+        flex-direction: column;
+        align-items: center;
+    }
   
-      .news-article{
-          width: 100%;
-      }
+    .news-article{
+        width: 100%;
+    }
   
-      .news-container{
-          width: 90%;
-          margin: 0 auto;
-      }
+    .news-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .form_content{
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    .continue_button {
+        margin-bottom: 30px;
+        bottom: unset;
+    }
+
+    .form_title {
+        position: relative;
+        width: 100%;
+        background-color: transparent;
+        padding:0;
+        font-size: 20px;
+        height: 10vh;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
-  @media (max-width: 900px) { 
-    .grid-container { 
-        grid-template-columns: 100px 1fr; 
-    } 
-}
+  

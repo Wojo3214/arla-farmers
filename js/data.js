@@ -98,6 +98,7 @@ function appendCarbonFootprint(carbonFootprint) {
         legend: {
           onClick: (e) => e.stopPropagation()
       },
+      
         scales: {
              xAxes: [{
                 gridLines: {
