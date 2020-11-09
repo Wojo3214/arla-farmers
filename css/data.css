@@ -321,7 +321,7 @@
 
 }
 .pie_chart {
-    
+    position: relative;
     width: 100%;
 }
 

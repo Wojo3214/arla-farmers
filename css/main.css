@@ -398,33 +398,39 @@ canvas {
     .cow_question_icon {
         fill: white;
         z-index: 2;
-        align-self: flex-start;
-        margin-top: 10px;
+        align-self: center;
     }
 
     .milk_question_icon {
         fill: white;
         z-index: 2;
-        align-self: flex-start;
-        margin-top: 10px;
+        align-self: center;
     }
 
     .tractor_question_icon {
         fill: white;
         z-index: 2;
-        align-self: flex-start;
-        margin-top: 10px;
+        align-self: center;
     }
 
     .pollution_question_icon {
         fill: white;
         z-index: 2;
-        align-self: flex-start;
-        margin-top: 10px;
+        align-self: center;
     }
 
     .specific-title{
         font-size: 24px;
+    }
+
+    #progress {
+        width: 20px;
+    }
+
+    progress#progress::-webkit-progress-bar {
+      width: 50px;
+        justify-self: center;
+      align-self: center;
     }
 
 }
