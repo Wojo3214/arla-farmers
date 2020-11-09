@@ -19,7 +19,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 function userAuthenticated(user) {
     _currentUser = user;
     console.log(user);
-    appendNews(news);
 
     // Appending currentUser name ans surname to HTML
     document.getElementById("hello").innerHTML = "Hi " + user.displayName;
@@ -50,7 +49,7 @@ function userNotAuthenticated() {
 function logout() {
     firebase.auth().signOut();
     navigateToLogin("login");
-    
+
 }
 
 // navigate to a new view/page by changing href

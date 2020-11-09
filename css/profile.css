@@ -328,3 +328,11 @@
 .all_badges {
     margin-top: -10vh;
 }
+
+.theme_active {
+background-color: red;
+}
+
+.theme_not_active {
+    background-color: black;
+}

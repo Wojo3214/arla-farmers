@@ -330,10 +330,10 @@ function appendBarCarbon(carbonFootprint) {
 function pushNewData() {
 
     let carbonAllInput = document.querySelector('#question_input');
-    let dieselAllInput = document.querySelector('question_input2');
+    let dieselAllInput = document.querySelector('#question_input2');
     let digestionAllInput = document.querySelector('#question_input3');
-    let electricityAllInput = document.querySelector('question_input4');
-    let feedAllInput = document.querySelector('question_input5');
+    let electricityAllInput = document.querySelector('#question_input4');
+    let feedAllInput = document.querySelector('#question_input5');
     let currentYear = new Date().getFullYear();
 
     let newData = {
@@ -369,5 +369,5 @@ function pushNewData() {
     };
 
     _dataRef.add(newData);
-}
 
+}

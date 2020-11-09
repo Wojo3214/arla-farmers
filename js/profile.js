@@ -6,9 +6,13 @@
 function themeOn() {
     let activeTheme = document.getElementById("active");
     let notActiveTheme = document.getElementById("not_active");
+
+    let activeThemeChanges = document.getElementById("profil");
+
     activeTheme.classList.add("active");
     notActiveTheme.classList.remove("active");
     notActiveTheme.classList.add("not_active");
+
 }
 themeOn();
 
