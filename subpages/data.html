@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/data.css">
     <link rel="stylesheet" href="https://use.typekit.net/hfm1aui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
     <title>Arla farmers - dashboard</title>
 </head>
 
@@ -21,7 +22,7 @@
                             alt="Arla logo"></a>
                 </li>
                 <li class="nav_item">
-                    <a href="index.html" id="home" class="nav_link"><img src="../img/home_icon.svg" class="nav_icon"
+                    <a href="../index.html" id="home" class="nav_link"><img src="../img/home_icon.svg" class="nav_icon"
                             alt="Icon">Home</a>
                 </li>
                 <li class="nav_item">
@@ -37,12 +38,44 @@
                             class="nav_icon" alt="Icon">Form</a>
                 </li>
                 <li class="nav_item">
-                    <a id="profile" class="nav_link profile_item"><img src="../img/profile_icon.svg" class="nav_icon"
+                    <a href="../subpages/profile.html" id="profile" class="nav_link profile_item"><img src="../img/profile_icon.svg" class="nav_icon"
                             alt="Icon">Profile</a>
                 </li>
             </ul>
         </nav>
-        <div class="main_content">
+        <div class="main-content data_content">
+            <header class="top_data_title"><h3>YOUR DATA OVERVIEW</h3></header>
+            <div class="data-container">
+                <section class="prices_top_section">
+                    <div class="price_element box1">
+                        <h3>Number of cows</h3>
+                        <div class="price_number">
+                        <img src="../img/cow_data.png" class="data_icon"
+                        alt="Icon">50</div>
+                    </div>
+                    <div class="price_element">
+                        <h3>Liters of milk per cow</h3>
+                        <div class="price_number">
+                        <img src="../img/milk_data.png" class="data_icon"
+                        alt="Icon">199,715</div>
+                    </div>
+                    <div class="price_element">
+                        <h3>Milk price per liter</h3>
+                        <div class="price_number">
+                        $ 1,59</div>
+                    </div>
+                    <div class="price_element">
+                        <h3>Revenue per cow</h3>
+                        <div class="price_number">
+                        $ 317,547</div>
+                    </div>
+                </section>
+                <div class="carbon_box">
+                    <h2 class="carbon_box_title">Your Carbon Footprint</h2>
+                    <canvas id="carbonFootprint"></canvas>
+                </div>
+            </div>
+            
 
             <section class="divided_carbon">
                 <div class="pie_section">
@@ -62,11 +95,12 @@
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
         <script src="../js/main.js"></script>
-        <script src="../js/data.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
         <!----- firebase config js file ----->
         <script src="../js/firebase_config.js"></script>
         <!----- main js file ----->
         <script src="../js/login.js"></script>
+        <script src="../js/data.js"></script>
 </body>
 
 </html>
