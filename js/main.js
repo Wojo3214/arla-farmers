@@ -23,8 +23,11 @@ if(viewportWidth > 700){
 window.addEventListener('resize', function () {
 	viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 	if (viewportWidth < 700) {
-		document.querySelector(".current-category").setAttribute("style", "display: flex; justify-content: space-between");
-}});
+        document.querySelector(".current-category").setAttribute("style", "display: flex; justify-content: space-between");
+    } else {
+        document.querySelector(".current-category").style.display = "none";
+    }
+});
 
   function appendNews(articles){
       let htmlTemplate = "";
@@ -67,7 +70,7 @@ window.addEventListener('resize', function () {
         <p class="author-and-date">Author: ${specificArticle.author}</p>
         <p class="author-and-date">Publish date: ${specificArticle.publicDate}</p>
           <div class="article-main-info">
-              <p class="specific-text">${specificArticle.text}</p>
+              <p class="specific-text article-text">${specificArticle.text}</p>
               
           </div>
       </div>
@@ -92,11 +95,12 @@ window.addEventListener('resize', function () {
         appendFilteredNews(filteredNews);
 
         if(viewportWidth < 700){
-            document.querySelector(".current-category").style.display = "block";
+            document.querySelector(".current-category").style.display = "flex";
             appendFilteredNewsName(value);
+            slideUp();
         }
 
-        slideUp();
+        
         
 
         document.querySelector(".news-main-top").style.display = "none";
@@ -115,8 +119,12 @@ function openAnimals(value){
         let filteredNews = articles.filter(article => article.category.includes("Animals"));
         console.log(filteredNews);
         appendFilteredNews(filteredNews);
-        appendFilteredNewsName(value);
-        slideUp();
+        
+        if(viewportWidth < 700){
+            document.querySelector(".current-category").style.display = "flex";
+            appendFilteredNewsName(value);
+            slideUp();
+        }
 
         document.querySelector(".news-main-top").style.display = "none";
     });
@@ -134,8 +142,12 @@ function openTechnology(value){
         let filteredNews = articles.filter(article => article.category.includes("technology"));
         console.log(filteredNews);
         appendFilteredNews(filteredNews);
-        appendFilteredNewsName(value);
-        slideUp();
+        
+        if(viewportWidth < 700){
+            document.querySelector(".current-category").style.display = "flex";
+            appendFilteredNewsName(value);
+            slideUp();
+        }
 
         document.querySelector(".news-main-top").style.display = "none";
     });
@@ -153,8 +165,12 @@ function openEvents(value){
         let filteredNews = articles.filter(article => article.category.includes("events"));
         console.log(filteredNews);
         appendFilteredNews(filteredNews);
-        appendFilteredNewsName(value);
-        slideUp();
+        
+        if(viewportWidth < 700){
+            document.querySelector(".current-category").style.display = "flex";
+            appendFilteredNewsName(value);
+            slideUp();
+        }
 
         document.querySelector(".news-main-top").style.display = "none";
     });
@@ -172,8 +188,12 @@ function openEnvironment(value){
         let filteredNews = articles.filter(article => article.category.includes("Environment"));
         console.log(filteredNews);
         appendFilteredNews(filteredNews);
-        appendFilteredNewsName(value);
-        slideUp();
+        
+        if(viewportWidth < 700){
+            document.querySelector(".current-category").style.display = "flex";
+            appendFilteredNewsName(value);
+            slideUp();
+        }
 
         document.querySelector(".news-main-top").style.display = "none";
     });
@@ -187,15 +207,15 @@ function appendFilteredNews(filteredNews){
         console.log(article.img);
         
         htmlTemplate +=`
-          <div class="news-article">
-          <a href="#select-article" onclick="appendArticleDetails('${article.id}')"><img src="${article.img}" class="news-big-pic" alt="article image"></a>
-              <div class="article-main-info">
-              <h3 class="news-title"><a href="#select-article" onclick="appendArticleDetails('${article.id}')">${article.title}</a></h3>
-                  <p class="desc-short">${article.desc}</p>
-                  <p class="author-and-date">Author: ${article.author}</p>
-                  <p class="author-and-date">Publish date: ${article.publicDate}</p>
-              </div>
-          </div>
+        <div class="news-article">
+        <a href="#select-article" class="link-to-article" onclick="appendArticleDetails('${article.id}')"><img src="${article.img}" class="news-big-pic" alt="article image"></a>
+            <div class="article-main-info">
+                <h3 class="news-title"><a href="#select-article" class="link-to-article" onclick="appendArticleDetails('${article.id}')">${article.title}</a></h3>
+                <p class="desc-short">${article.desc}</p>
+                <p class="author-and-date">Author: ${article.author}</p>
+                <p class="author-and-date">Publish date: ${article.publicDate}</p>
+            </div>
+        </div>
         `
     }
 
