@@ -453,7 +453,7 @@ function appendBarCarbon(carbonFootprint) {
             },
             scales: {
                 xAxes: [{
-                    barThickness: 30
+                    maxBarThickness: 35
                 }],
             }
 
@@ -504,6 +504,8 @@ function pushNewData() {
         importedFeedSummer: dieselAllInput.value,
         importedFeedWinter: digestionAllInput.value
     };
+
+
 
     _dataRef.add(newData);
     document.getElementById("pro-form").reset();
