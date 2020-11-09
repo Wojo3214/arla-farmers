@@ -14,5 +14,5 @@ const _firebaseConfig = {
 };
 
 firebase.initializeApp(_firebaseConfig);
-const _db = firebase.firestore();
+let _db = firebase.firestore();
 
