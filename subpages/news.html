@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,34 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
     <title>News - Arla Farmers</title>
 </head>
+
 <body>
     <div class="grid-container">
         <nav class="navigation">
             <ul class="nav_list">
                 <li class="nav_item logo">
-                    <a href="../index.html" id="home" class="nav_link"><img src="../img/logo.svg" class="nav_logo" alt="Arla logo"></a>
+                    <a href="../index.html" id="home" class="nav_link"><img src="../img/logo.svg" class="nav_logo"
+                            alt="Arla logo"></a>
                 </li>
                 <li class="nav_item">
-                    <a href="../index.html" id="home" class="nav_link"><img src="../img/home_icon.svg" class="nav_icon" alt="Icon">Home</a>
+                    <a href="../index.html" id="home" class="nav_link"><img src="../img/home_icon.svg" class="nav_icon"
+                            alt="Icon">Home</a>
                 </li>
                 <li class="nav_item">
-                    <a href="news.html" id="news" class="nav_link"><img src="../img/news_icon.svg" class="nav_icon" alt="Icon">News</a>
+                    <a href="news.html" id="news" class="nav_link"><img src="../img/news_icon.svg" class="nav_icon"
+                            alt="Icon">News</a>
                 </li>
                 <li class="nav_item">
-                    <a href="data.html" id="data" class="nav_link"><img src="../img/data_icon.svg" class="nav_icon" alt="Icon">Data</a>
+                    <a href="data.html" id="data" class="nav_link"><img src="../img/data_icon.svg" class="nav_icon"
+                            alt="Icon">Data</a>
                 </li>
                 <li class="nav_item">
-                    <a href="form.html" id="form" class="nav_link"><img src="../img/form_icon.svg" class="nav_icon" alt="Icon">Form</a>
+                    <a href="form.html" id="form" class="nav_link"><img src="../img/form_icon.svg" class="nav_icon"
+                            alt="Icon">Form</a>
                 </li>
                 <li class="nav_item">
-                    <a href="profile.html" id="profile" class="nav_link"><img src="../img/profile_icon.svg" class="nav_icon" alt="Icon">Profile</a>
+                    <a href="profile.html" id="profile" class="nav_link"><img src="../img/profile_icon.svg"
+                            class="nav_icon" alt="Icon">Profile</a>
                 </li>
             </ul>
         </nav>
@@ -38,22 +46,28 @@
                 <div class="current-category">
                     <span class="category-btn" id="all-news">
                         <img src="../img/all-icon.png" alt="all news">All news</span>
-                        <img src="../img/icon-up-down.png" class="icon-up-down" onclick="slideDown()">
+                    <img src="../img/icon-up-down.png" class="icon-up-down" onclick="slideDown()">
                 </div>
                 <div class="categories">
-                    <span class="category-btn" id="all-news"><img src="../img/all-icon.png" alt="all news"><a href="news.html" class="link-to-all">All news</a></span>
-                    <span class="category-btn" id="food" onclick="openFood()"><img src="../img/food-icon.png" alt="all news">Food</span>
-                    <span class="category-btn" id="animals" onclick="openAnimals()"><img src="../img/animals-icon.png" alt="all news">Animals</span>
-                    <span class="category-btn" id="technology" onclick="openTechnology()"><img src="../img/technology-icon.png" alt="all news">Technology</span>
-                    <span class="category-btn" id="environment" onclick="openEnvironment()"><img src="../img/environment-icon.png" alt="all news">Environment</span>
-                    <span class="category-btn" id="events" onclick="openEvents()"><img src="../img/events-icon.png" alt="all news">Events</span>
+                    <span class="category-btn" id="all-news"><img src="../img/all-icon.png" alt="all news"><a
+                            href="news.html" class="link-to-all">All news</a></span>
+                    <span class="category-btn" id="food" onclick="openFood()"><img src="../img/food-icon.png"
+                            alt="all news">Food</span>
+                    <span class="category-btn" id="animals" onclick="openAnimals()"><img src="../img/animals-icon.png"
+                            alt="all news">Animals</span>
+                    <span class="category-btn" id="technology" onclick="openTechnology()"><img
+                            src="../img/technology-icon.png" alt="all news">Technology</span>
+                    <span class="category-btn" id="environment" onclick="openEnvironment()"><img
+                            src="../img/environment-icon.png" alt="all news">Environment</span>
+                    <span class="category-btn" id="events" onclick="openEvents()"><img src="../img/events-icon.png"
+                            alt="all news">Events</span>
                 </div>
                 <div class="news-container news-main-top"></div>
                 <div class="news-container filteredNews"></div>
                 <div class="news-container article-details"></div>
-                </div>
             </div>
-        </div>        
+        </div>
+    </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
@@ -62,9 +76,10 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
     <!----- firebase config js file ----->
-  <script src="../js/firebase_config.js"></script>
-  <!----- main js file ----->
-  <script src="../js/login.js"></script>
-  <script src="../js/main.js"></script>
+    <script src="../js/firebase_config.js"></script>
+    <!----- main js file ----->
+    <script src="../js/login.js"></script>
+    <script src="../js/main.js"></script>
 </body>
+
 </html>

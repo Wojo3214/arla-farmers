@@ -380,7 +380,7 @@ border-color: #905345;
     }
 
     .big_badge {
-        width: 30vw;
+        width: 20vh;
     }
 
     .badge {
@@ -405,6 +405,7 @@ border-color: #905345;
 
     .description {
         font-size: 16px;
+        margin-bottom: 3vh;
     }
 
     .web {
