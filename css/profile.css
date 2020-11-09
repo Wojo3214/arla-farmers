@@ -61,11 +61,12 @@
     margin-bottom: 2vh;
 }
 
-#profile_name {
+.profile_name {
     font-family: ArlaInterface-bold;
     font-size: 32px;
     color: white;
     margin-bottom: 1vh;
+    text-transform: uppercase;
 }
 
 .farm_id {
@@ -178,6 +179,7 @@
 .set_pas {
     display: flex;
     flex-direction: column;
+    margin-top: 5vh;
 }
 
 .profile_info {
@@ -192,7 +194,7 @@
 }
 
 .mark_button {
-    padding: 0 8.5px;
+    padding: 0 11px;
     border-radius: 32px;
     font-size: 14px;
     color: var(--dark);
@@ -206,7 +208,7 @@
 }
 
 .mark_text {
-    width: 233px;
+    width: 250px;
     color: var(--dark);
     font-family: ArlaInterface-Regular;
     font-size: 14px;
@@ -217,7 +219,7 @@
 }
 
 .triangle {
-    margin-left: 70px;
+    margin-left: 86px;
     width: 0; 
   height: 0; 
   border-left: 2vh solid transparent;
@@ -289,7 +291,7 @@
 .line1 {
     background-color: var(--main-green);
     border: 2px solid var(--main-green);
-    padding: 0.2vw 4vw;
+    padding: 0vw 4vw;
     border-radius: 32px;
     z-index: 1;
 }
@@ -305,8 +307,7 @@
 
 .line {
     background-color: #93A5A1;
-    border: 2px solid #93A5A1;
-    padding: 0.07vw 4vw;
+    padding: 0 4vw;
     border-radius: 32px;
     margin-left: -3px;
 }
@@ -335,4 +336,85 @@ background-color: red;
 
 .theme_not_active {
     background-color: black;
+}
+
+.mobile {
+    display: none;
+}
+
+.web {
+    display: block;
+}
+
+.progress_line {
+    display: block;
+}
+
+@media (max-width: 900px) { 
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, 100%); 
+        grid-template-rows: 1fr 60%  60px;
+        grid-template-areas: "profile"
+        "badges";
+    }
+
+    #settings {
+        display: none;
+    }
+
+    .profile_info {
+        margin-bottom: 0;
+    }
+
+    .carbon_header {
+        padding-top: 2vw;
+        font-size: 20px;
+    }
+
+    .big_badge {
+        width: 30vw;
+    }
+
+    .badge {
+        display: none;
+    }
+
+    .profile_name {
+        font-size: 20px;
+    }
+
+    .farm_id {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .carbon_text {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .web {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .badges {
+        justify-content: space-between;
+        padding-top: 5vw;
+        padding-bottom: 15vw;
+    }
+
+    .progress_line {
+        display: none;
+    }
+
 }
