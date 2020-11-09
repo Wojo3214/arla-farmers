@@ -104,6 +104,13 @@
     bottom: 20%;
 }
 
+.continue_button:hover {
+    background-color: white;
+    color: var(--dark);
+    transition: 0.9s;
+}
+
+
 .continue_link {
     width: 100%;
     position: absolute;
@@ -227,6 +234,10 @@ progress#progress::-webkit-progress-bar {
     border-radius: 40px;
     margin-top: 30px;
     font-size: 18px;
+}
+
+.save_button:hover {
+    opacity: 0.9;
 }
 
 .milk_section_questions {
