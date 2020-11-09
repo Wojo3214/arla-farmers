@@ -198,6 +198,11 @@ height: 80%;
     box-shadow: var(--shadow);
 }
 
+.carbonmain {
+    width: 100%;
+    height: 80%;
+    margin-bottom: 50px;
+}
 .weather {
      padding: 10px 20px;
     -webkit-box-shadow: var(--shadow);
@@ -338,7 +343,7 @@ span {
     .bottom-index {
     position: relative;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
    
     height: 100%;
     align-items: center;
@@ -347,7 +352,7 @@ span {
 }
 
     .deadline {
-        margin: 20px 0 80px 0;
+        margin: 10px 0;
     text-align: center;
     position: relative;
      padding: 10px 20px;
@@ -361,7 +366,7 @@ height: 40vh;
 
 
 .carbon {
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -374,8 +379,9 @@ height: 40vh;
     box-shadow: var(--shadow);
 }
 
+
 .weather {
-    margin: 20px 0;
+    margin: 10px 0 60px 0;
      padding: 10px 20px;
     -webkit-box-shadow: var(--shadow);
     -moz-box-shadow: var(--shadow);
@@ -390,13 +396,22 @@ height: 40vh;
         grid-template-areas: "main-content" "bottom-content" 
         "nav";
     }
-.hello p {
-    display: none;
+.hello {
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: main-content;
+    color: white;
 }
-.carbonmain {
-    height: 80%;
-    padding-bottom: 50px;
+
+#hello {
+     font-size: 28px;
+    font-family: 'ArlaStrong';
+    margin-bottom: 10px;
 }
+
 .backtoform {
 display: flex;
 flex-direction: column;
