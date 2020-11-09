@@ -6,12 +6,24 @@
 function themeOn() {
     let activeTheme = document.getElementById("active");
     let notActiveTheme = document.getElementById("not_active");
+    let activeThemeChanges = document.getElementById("profile_section");
+    let activeThemeButton = document.getElementById("pas_button");
+    let activeThemeProgress = document.getElementById("profile_progress");
+    let activeThemeProgress1 = document.getElementById("profile_progress1");
 
-    let activeThemeChanges = document.getElementById("profil");
+
 
     activeTheme.classList.add("active");
     notActiveTheme.classList.remove("active");
     notActiveTheme.classList.add("not_active");
+    activeThemeChanges.classList.add("theme_active");
+    activeThemeChanges.classList.remove("theme_not_active");
+    activeThemeButton.classList.add("button_active");
+    activeThemeButton.classList.remove("button_not_active");
+    activeThemeProgress.classList.add("theme_active");
+    activeThemeProgress.classList.remove("theme_not_active");
+    activeThemeProgress1.classList.add("theme_active");
+    activeThemeProgress1.classList.remove("theme_not_active");
 
 }
 themeOn();
@@ -19,10 +31,18 @@ themeOn();
 function themeOff() {
     let notActive = document.getElementById("not_active");
     let active = document.getElementById("active");
+    let notActiveThemeChanges = document.getElementById("profile_section");
+    let activeThemeButton = document.getElementById("pas_button");
+    let activeThemeProgress = document.getElementById("profile_progress");
+    let activeThemeProgress1 = document.getElementById("profile_progress1");
     notActive.classList.remove("not_active");
     notActive.classList.add("active");
     active.classList.remove("active");
     notActive.classList.remove("not_active");
+    notActiveThemeChanges.classList.add("theme_not_active");
+    activeThemeButton.classList.add("button_not_active");
+    activeThemeProgress.classList.add("theme_not_active");
+    activeThemeProgress1.classList.add("theme_not_active");
 }
 themeOff();
 

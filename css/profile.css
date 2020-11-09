@@ -49,6 +49,7 @@
 }
 
 
+
 .badges {
     grid-area: badges;
 }
@@ -282,6 +283,7 @@
 
 .progress_line {
     display: flex;
+    visibility: visible;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -291,7 +293,7 @@
 .line1 {
     background-color: var(--main-green);
     border: 2px solid var(--main-green);
-    padding: 0vw 4vw;
+    padding: 0.2vw 4vw;
     border-radius: 32px;
     z-index: 1;
 }
@@ -307,7 +309,7 @@
 
 .line {
     background-color: #93A5A1;
-    padding: 0 4vw;
+    padding: 0.2vw 4vw;
     border-radius: 32px;
     margin-left: -3px;
 }
@@ -331,11 +333,21 @@
 }
 
 .theme_active {
-background-color: red;
+background-color: #905345;
+border-color: #905345;
 }
 
 .theme_not_active {
-    background-color: black;
+    background-color: var(--main-green);
+    border-color: var(--main-green);
+}
+
+.button_active {
+    background-color: #DDAC6A;
+}
+
+.button_not_active {
+    background-color: var(--btn-green);
 }
 
 .mobile {
@@ -343,10 +355,6 @@ background-color: red;
 }
 
 .web {
-    display: block;
-}
-
-.progress_line {
     display: block;
 }
 
@@ -414,7 +422,7 @@ background-color: red;
     }
 
     .progress_line {
-        display: none;
+        visibility: hidden;
     }
 
 }
